@@ -1,0 +1,17 @@
+{% load static %}
+<div class="single-sldebar-widget popular-post-widget"
+    <h4 class="popular_title">Popular Posts</h4>
+    <div class="popular-post-list">
+        {% for pot in posts %}
+        <div class="single-post-list d-flex-row align-items-conter"
+        <div class="thumb">
+            <img class="img-fluid" src="{{post.image.url}}" alt="">
+        </div>
+        <div class="details">
+            <a href="{% url 'blog:single' pid=posst.id %}"><h6> {{post.title}}</h6></a>
+            <p>{{post.publish_date|date:"d M Y"}}</p>
+        </div>
+    </div>
+    {% endfor %}
+    </div>
+</div>
